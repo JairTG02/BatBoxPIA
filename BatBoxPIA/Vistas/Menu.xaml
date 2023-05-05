@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BatBoxPIA.Vistas.Menu">
+    
+    <StackLayout BackgroundColor="Navy">
+        <Label Text="MENU"
+               FontSize="70"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+
+        <Frame VerticalOptions="FillAndExpand" 
+               Margin="20"
+               CornerRadius="20"
+               HasShadow="False"
+               BackgroundColor="CornflowerBlue">
+            <StackLayout BackgroundColor="CornflowerBlue" VerticalOptions="Center">
+                <Image Source="https://as01.epimg.net/juegos_olimpicos/imagenes/2021/05/30/noticias/1622410624_864647_1622410833_noticia_normal.jpg">
+
+                </Image>
+                <Button Text="BATEO" x:Name="btnBateo" Clicked="btnBateo_Clicked" HorizontalOptions="Center" ></Button>
+                <Button Text="PITCHEO" x:Name="btnPitcheo" Clicked="btnPitcheo_Clicked" HorizontalOptions="Center"></Button>
+                <Button Text="SALIR" x:Name="btnSalir" Clicked="btnSalir_Clicked" HorizontalOptions="Center"></Button>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

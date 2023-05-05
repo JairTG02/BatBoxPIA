@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BatBoxPIA.Vistas.PaginaInicial">
+    
+        <StackLayout BackgroundColor="Navy">
+        <Label Text="Bat Box"
+               FontSize="70"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+            
+        <Frame VerticalOptions="FillAndExpand" 
+               Margin="20"
+               CornerRadius="20"
+               HasShadow="False"
+               BackgroundColor="CornflowerBlue">
+            <StackLayout BackgroundColor="CornflowerBlue" VerticalOptions="Center">
+                <Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
+
+                </Image>
+                <Button Text="Login" x:Name="btnLogin" Clicked="btnLogin_Clicked"></Button>
+                <Button Text="Registrarse" x:Name="btnRegistrarse" Clicked="btnRegistrarse_Clicked"></Button>
+            </StackLayout>
+            </Frame>
+           
+
+        </StackLayout>
+   
+</ContentPage>

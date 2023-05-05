@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BatBoxPIA.Vistas.EstadisticaBateo">
+    <StackLayout BackgroundColor="CornflowerBlue">
+        <Label  Text="ESTADISTICA BATEO"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+
+        <Image Source="https://cdn11.bigcommerce.com/s-3kwrgfp6rz/product_images/uploaded_images/hitters.jpg"></Image>
+
+        <Entry x:Name="txtNombreJugador" Placeholder="Nombre del Jugador"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtVecesAlBat" Placeholder="Veces al Bat"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtHits" Placeholder="Hits"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtDobletes" Placeholder="Dobletes"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtTripletes" Placeholder="Tripletes"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtHR" Placeholder="Homeruns"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtBB" Placeholder="Bases por Bola"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtHBP" Placeholder="Bases por Golpe"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+        <Entry x:Name="txtSAC" Placeholder="Sacrificios"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"/>
+     
+
+
+
+    </StackLayout>
+</ContentPage>
