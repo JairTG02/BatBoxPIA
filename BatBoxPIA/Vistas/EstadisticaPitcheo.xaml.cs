@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BatBoxPIA.Models;
 
 namespace BatBoxPIA.Vistas
 {
@@ -38,10 +39,10 @@ namespace BatBoxPIA.Vistas
 
                
                 
-                double ERA = (CarrerasPermitidas / EntradasLanzadas) * 9;
+                double ERA = (((CarrerasPermitidas / EntradasLanzadas) * 9)*10);
                 txtERA.Text = Math.Round(ERA, 3).ToString();
 
-                double WHIP = (BasePorBolas + Hits) / EntradasLanzadas;
+                double WHIP = (((BasePorBolas + Hits) / EntradasLanzadas)*10);
                 txtWHIP.Text = Math.Round(WHIP, 3).ToString();
 
 

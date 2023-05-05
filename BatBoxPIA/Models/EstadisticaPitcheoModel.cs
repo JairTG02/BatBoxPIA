@@ -8,15 +8,15 @@ namespace BatBoxPIA.Models
     public class EstadisticaPitcheoModel
     {
         [DisplayName("Nombre del pitcher")]
-        public string NombrePitcher { get; set; }
+        public string NombreJugador { get; set; }
         [DisplayName("Entradas lanzadas")]
         public double EntradasLanzadas { get; set; }
         [DisplayName("Hits permitidos")]
-        public int HitsPermitidos { get; set; }
+        public int Hits { get; set; }
         [DisplayName("Carreras permitidas")]
-        public int CarrerasPerm { get; set; }
+        public int CarrerasPermitidas { get; set; }
         [DisplayName("Base por bola permitidas")]
-        public int BasePorBolaPerm { get; set; }
+        public double BasePorBolas { get; set; }
         public double ERA { get; set; }
         [DisplayName("ERA")]
         public string ERAStr

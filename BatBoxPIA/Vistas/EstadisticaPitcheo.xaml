@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.EstadisticaPitcheo">
-    
+    <SwipeView>
         <StackLayout BackgroundColor="CornflowerBlue">
             <Label  Text="ESTADISTICA PITCHEO"
                     FontSize="20"
@@ -11,7 +11,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center" />
 
-        <Image Source="https://www.nbcsports.com/sites/rsnunited/files/article/hero/web-221116-sandy-alcantara-usat.jpg"></Image>
+            <Image Source="https://images.vexels.com/media/users/3/144814/isolated/preview/e3f9bc8d62f666d8c30b588776d33f1f-baseball-player-throw-silhouette.png" HeightRequest="100" WidthRequest="50"></Image>
         
         <Entry x:Name="txtNombreJugador" Placeholder="Nombre del Jugador" 
                PlaceholderColor="Navy" HeightRequest="50"
@@ -41,6 +41,6 @@
         <Button Text="CALCULAR" x:Name="btnCalcular" Clicked="btnCalcular_Clicked" HorizontalOptions="Center" ></Button>
 
     </StackLayout>
-    
+    </SwipeView>
    
 </ContentPage>
