@@ -39,7 +39,28 @@
         <Entry x:Name="txtSAC" Placeholder="Sacrificios"
                PlaceholderColor="Navy" HeightRequest="50"
                TextColor="Black"/>
-     
+        
+        <Entry x:Name="txtAVG" Placeholder="Promedio de Bateo"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"
+               IsReadOnly="True"/>
+        
+        <Entry x:Name="txtOBP" Placeholder="OBP"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"
+               IsReadOnly="True"/>
+        
+        <Entry x:Name="txtSlugging" Placeholder="Slugging"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"
+               IsReadOnly="True"/>
+        
+        <Entry x:Name="txtOPS" Placeholder="OPS"
+               PlaceholderColor="Navy" HeightRequest="50"
+               TextColor="Black"
+               IsReadOnly="True"/>
+        
+        <Button Text="CALCULAR" x:Name="btnCalcular" Clicked="btnCalcular_Clicked" HorizontalOptions="Center"></Button>
 
 
 
