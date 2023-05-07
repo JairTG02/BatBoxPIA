@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.EstadisticaBateo">
-    <StackLayout BackgroundColor="CornflowerBlue">
+    <StackLayout BackgroundColor="CornflowerBlue" FlowDirection="MatchParent">
         <Label  Text="ESTADISTICA BATEO"
                     FontSize="20"
                     FontAttributes="Bold"
@@ -10,8 +10,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center" />
 
-        <Image Source="https://cdn11.bigcommerce.com/s-3kwrgfp6rz/product_images/uploaded_images/hitters.jpg"></Image>
-
+        
         <Entry x:Name="txtNombreJugador" Placeholder="Nombre del Jugador"
                PlaceholderColor="Navy" HeightRequest="50"
                TextColor="Black"/>
