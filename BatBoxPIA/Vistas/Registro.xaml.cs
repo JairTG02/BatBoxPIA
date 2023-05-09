@@ -16,5 +16,16 @@ namespace BatBoxPIA.Vistas
         {
             InitializeComponent();
         }
+
+        private void btnRegistrar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Menu());
+
+        }
+
+        private void btnRegresarRegistro_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PaginaInicial());
+        }
     }
 }

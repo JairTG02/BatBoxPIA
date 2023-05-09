@@ -27,6 +27,8 @@
                            IsPassword="True"  
                            TextColor="Black"/>
 
-       
+        <Button Text="REGISTRARSE" x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked"></Button>
+        <Button Text="REGRESAR" x:Name="btnRegresarLogin" Clicked="btnRegresarRegistro_Clicked"></Button>
+
     </StackLayout>
 </ContentPage>
