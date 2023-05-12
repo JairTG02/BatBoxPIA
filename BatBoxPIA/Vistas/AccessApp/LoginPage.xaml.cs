@@ -20,5 +20,11 @@ namespace BatBoxPIA.Vistas.AccessApp
             await Navigation.PushAsync(new RegisterPage());
         }
 
+        private async void Login_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Menu());
+
+        }
+
     }
 }

@@ -133,7 +133,8 @@
                             WidthRequest="300"
                             HeightRequest="50"
                             Command="{Binding LoginCommand}"
-                            IsEnabled="{Binding IsEnabledTxt}" 
+                            IsEnabled="{Binding IsEnabledTxt}"
+                            Clicked="Login_Clicked"
                     />
                   <Button
                             Text="Don't have an account? Sign Up"
