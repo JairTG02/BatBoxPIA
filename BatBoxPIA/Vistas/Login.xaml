@@ -4,10 +4,11 @@
              x:Class="BatBoxPIA.Vistas.Login">
 
     <StackLayout>
-        <Frame BackgroundColor="Navy" Padding="24" CornerRadius="0">
-            <Label Text="LOGIN" HorizontalTextAlignment="Center" TextColor="HotPink" FontSize="36"/>
-        </Frame>
-        <Label Text="INSERTE SUS CREDENCIALES" TextColor="Navy" FontSize="Title" Padding="30,10,30,10"/>
+        
+        <Label Text="BAT" HorizontalTextAlignment="Center" TextColor="#041E42" FontSize="36" FontAttributes="Bold" FontFamily="Paytone One"/>
+        <Label Text="BOX" HorizontalTextAlignment="Center" TextColor="#041E42" FontSize="36" FontAttributes="Bold" FontFamily="Paytone One"/>
+        
+        <Label Text="Inicia Sesion"  HorizontalTextAlignment="Center" TextColor="#942A2A" FontSize="Title" Padding="30,10,30,10" FontAttributes="Bold"/>
 
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
@@ -18,15 +19,16 @@
             </Label.FormattedText>
         </Label>
         <Entry x:Name="txtUsuario" Placeholder="Usuario"   
-                           PlaceholderColor="Navy" HeightRequest="50"   
-         TextColor="Black"/>
+                           PlaceholderColor="Black" HeightRequest="50"   
+         TextColor="Black" Margin="15"/>
         <Entry x:Name="txtPassword" Placeholder="Contraseña"   
-                           PlaceholderColor="Navy" HeightRequest="50"   
+                           PlaceholderColor="Black" HeightRequest="50"   
                            IsPassword="True"  
-                           TextColor="Black"/>
+                           TextColor="Black" Margin="15"/>
 
-        <Button Text="INICIAR SESION" x:Name="btnIniciarSesion" Clicked="btnIniciarSesion_Clicked"></Button>
-        <Button Text="REGRESAR" x:Name="btnRegresarLogin" Clicked="btnRegresarLogin_Clicked"></Button>
+        <Button Text="INICIAR SESION" TextColor="White" x:Name="btnIniciarSesion" Clicked="btnIniciarSesion_Clicked" BackgroundColor="#041E42" Padding="10" Margin="10,30" CornerRadius="15"></Button>
+        <Label Text="¿No tienes cuenta? Registrate" TextColor="Black" FontSize="Default" HorizontalTextAlignment="Center"></Label>
+        <Button Text="RESGISTRARSE" TextColor="White"  x:Name="btnRegresarLogin" Clicked="btnRegresarLogin_Clicked" BackgroundColor="#041E42" Padding="10" Margin="10,30" CornerRadius="15"></Button>
 
     </StackLayout>
 
