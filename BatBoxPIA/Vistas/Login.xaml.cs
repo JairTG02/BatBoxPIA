@@ -21,7 +21,7 @@ namespace BatBoxPIA.Vistas
         {
             Navigation.PushAsync(new Menu());
 
-            if (txtUsuario.Text == "JairTG")
+            if (txtUsuario.Text == "Test")
             {
                 if (txtPassword.Text == "1234")
                 {
