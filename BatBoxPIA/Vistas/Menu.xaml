@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.Menu">
     <ScrollView>
+        
         <StackLayout BackgroundColor="#fff">
             <Frame BackgroundColor="#D9D9D9"
                    Margin="20,20"

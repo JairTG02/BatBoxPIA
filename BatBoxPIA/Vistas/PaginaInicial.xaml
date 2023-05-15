@@ -27,9 +27,9 @@
                HasShadow="False">
                     <StackLayout  VerticalOptions="Center" Spacing="40">
                         <!-- antes de un comentario y, luego, agregue -->
-                        <!--<Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
+                        <Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
 
-                        </Image>-->
+                        </Image>
                         <Button Text="Login"
                         TextColor="White"
                         BackgroundColor="#041E42"
