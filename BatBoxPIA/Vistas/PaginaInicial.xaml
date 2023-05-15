@@ -2,29 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.PaginaInicial">
-    <ScrollView>
-        <StackLayout BackgroundColor="White">
-        <Label Text="BAT"
+    <RelativeLayout>
+        <Image Source="https://i.ibb.co/PYTWy0z/fondo.png"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
+        <Grid  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Grid>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="BAT"
                FontSize="60"
                FontAttributes="Bold"
                TextColor="#041E42"
                HorizontalOptions="Center"/>
-        <Label Text="BOX"
+                <Label Text="BOX"
                FontSize="60"
                FontAttributes="Bold"
                TextColor="#041E42"
                HorizontalOptions="Center"/>
-            
-        <Frame VerticalOptions="FillAndExpand" 
+
+                <Frame VerticalOptions="FillAndExpand" 
                Margin="20"
                CornerRadius="20"
-               HasShadow="False"
-               BackgroundColor="White">
-            <StackLayout BackgroundColor="White" VerticalOptions="Center" Spacing="40">
-                <Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
+               HasShadow="False">
+                    <StackLayout  VerticalOptions="Center" Spacing="40">
+                        <!-- antes de un comentario y, luego, agregue -->
+                        <!--<Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
 
-                </Image>
-                <Button Text="Login"
+                        </Image>-->
+                        <Button Text="Login"
                         TextColor="White"
                         BackgroundColor="#041E42"
                         BorderColor="#041E42"
@@ -34,7 +40,7 @@
                         HeightRequest="45"
                         x:Name="btnLogin" 
                         Clicked="btnLogin_Clicked"></Button>
-                <Button Text="Registrarse"
+                        <Button Text="Registrarse"
                         TextColor="White"
                         BackgroundColor="#041E42"
                         BorderColor="#041E42"
@@ -44,11 +50,11 @@
                         HeightRequest="45"
                         x:Name="btnRegistrarse" 
                         Clicked="btnRegistrarse_Clicked"></Button>
-            </StackLayout>
-            </Frame>
-           
+                    </StackLayout>
+                </Frame>
 
-        </StackLayout>
-    </ScrollView>
-   
+
+            </StackLayout>
+        </ScrollView>
+    </RelativeLayout>
 </ContentPage>
