@@ -108,18 +108,19 @@ namespace BatBoxPIA.ViewModels
                 
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await App.Current.MainPage.DisplayAlert("Alerta", "La contraseña o el correo son incorrectos", "OK");
             }
 
+            /*
             this.IsVisibleTxt = true;
             this.IsRunningTxt = true;
             this.IsEnabledTxt = false;
 
             await Task.Delay(20);
 
-            /*
+            
 
             List<UserModel> e = App.Database.GetUsersValidate(email, password).Result;
 
