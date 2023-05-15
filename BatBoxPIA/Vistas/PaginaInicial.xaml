@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.PaginaInicial">
+    <ScrollView>
     <RelativeLayout>
         <Image Source="https://i.ibb.co/PYTWy0z/fondo.png"
                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
         <Grid  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Grid>
-        <ScrollView>
             <StackLayout>
                 <Label Text="BAT"
                FontSize="60"
@@ -55,6 +55,6 @@
 
 
             </StackLayout>
-        </ScrollView>
-    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </ContentPage>

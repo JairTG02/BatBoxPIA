@@ -4,13 +4,13 @@
              x:Class="BatBoxPIA.Vistas.AccessApp.LoginPage"
              BackgroundColor="White">
     <ContentPage.Content>
+        <ScrollView>
         <RelativeLayout>
             <Image Source="https://i.ibb.co/pdP8XWh/fondo-LR.png"
                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
             <Grid  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Grid>
-            <ScrollView>
             <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="90" />
@@ -146,7 +146,8 @@
                             Clicked="SignUp_Clicked" />
                 </StackLayout>
             </Grid>
-        </ScrollView>
+        
       </RelativeLayout>
+     </ScrollView>
     </ContentPage.Content>
 </ContentPage>
