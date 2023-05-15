@@ -118,9 +118,9 @@ namespace BatBoxPIA.ViewModels
 
                 await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+                await App.Current.MainPage.DisplayAlert("Alerta", "Valida la longitud de la contraseña", "OK");
             }
 
             /*
