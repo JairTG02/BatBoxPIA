@@ -6,6 +6,9 @@ using GalaSoft.MvvmLight.Command;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+
+
+[assembly: ExportFont("Times-New-Roman.ttf", Alias = "titulo")]
 //using System.IO;
 //using Xamarin.Forms;
 //using Xamarin.Forms.Xaml;
@@ -80,20 +83,20 @@ namespace BatBoxPIA.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    "Debes ingresar tu correo.",
+                    "Aceptar");
                 return;
             }
             if (string.IsNullOrEmpty(this.password))
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    "Debes ingresar tu contraseña.",
+                    "Aceptar");
                 return;
             }
 
-            string WebAPIkey = "AIzaSyAqKHquaB5CVY1DuTACXRW3F-Ze0KAS7RQ";
+            string WebAPIkey = "AIzaSyBfW_qJ83Gxsvz85yEZ-AWHgp6_zuRNB40";
 
 
             var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIkey));
@@ -107,7 +110,7 @@ namespace BatBoxPIA.ViewModels
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", "Invalid useremail or password", "OK");
+                await App.Current.MainPage.DisplayAlert("Alerta", "La contraseña o el correo son incorrectos", "OK");
             }
 
             this.IsVisibleTxt = true;
@@ -152,7 +155,7 @@ namespace BatBoxPIA.ViewModels
 
         public async void ResetPasswordEmail()
         {
-            string WebAPIkey = "AIzaSyAqKHquaB5CVY1DuTACXRW3F-Ze0KAS7RQ";
+            string WebAPIkey = "AIzaSyBfW_qJ83Gxsvz85yEZ-AWHgp6_zuRNB40";
 
             try
             {

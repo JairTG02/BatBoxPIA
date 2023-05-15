@@ -6,6 +6,8 @@
     BackgroundColor="White">
     <ContentPage.Content>
          <ScrollView>
+             
+       
 
         <Grid RowSpacing="{OnPlatform iOS=25,Android=18}">
                 <Grid.RowDefinitions>
@@ -25,20 +27,45 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-         
 
-            <StackLayout Grid.Row="2" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
+
+                <StackLayout Grid.Row="0" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,0">
+                    <Label
+                         Text="BAT"
+                         FontFamily="titulo"
+                         FontAttributes="Bold"
+                         HorizontalTextAlignment="Center"
+                         HorizontalOptions="Center"
+                         FontSize="40"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="#942A2A"
+                         />
+                    <Label
+                         Text="BOX"
+                         FontAttributes="Bold"
+                         HorizontalTextAlignment="Center"
+                         HorizontalOptions="Center"
+                         FontSize="40"
+                         Margin="0,0,0,5"
+                         WidthRequest="300"
+                         TextColor="#942A2A"
+                         />
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" Orientation="Vertical" Margin="0,0,0,10">
                  <Label
-                         Text="Welcome Back"
+                         Text="Bienvenido otra vez"
                          FontAttributes="Bold"
                          HorizontalOptions="Center"
-                         FontSize="26"
+                         FontSize="23"
                          Margin="0,0,0,5"
                          WidthRequest="300"
                          TextColor="{OnPlatform Android=Black}"
                          />
                  <Label
-                    Text="Sign in to continue"
+                    Text="Inicia sesión para continuar"
                             TextColor="Black"
                             FontSize="15"
                             WidthRequest="300"
@@ -47,7 +74,7 @@
 
             <StackLayout Grid.Row="3" HorizontalOptions="Center" WidthRequest="{OnPlatform iOS=300,Android=300}" Orientation="Vertical"  >
                 <Label
-                    Text="Email"
+                    Text="Correo"
                     FontSize="{OnPlatform Android=13}"
                     TextColor="Black"
                     />
@@ -57,9 +84,9 @@
                     CornerRadius="{OnPlatform Android=7}"
                     >
                 <Entry
-                    Placeholder="BFortuna@gmail.com"
+                    Placeholder="ejemplo@gmail.com"
                     Keyboard="Email"
-                    MaxLength="25"
+                    MaxLength="60"
                     Text="{Binding EmailTxt, Mode=TwoWay}"
                     IsEnabled="{Binding IsEnabledTxt}"
                     FontSize="{OnPlatform Android=15,iOS=16}"
@@ -71,23 +98,13 @@
                   
                  <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="0">
                  <Label
-                    Text="Password"
+                    Text="Contraseña"
                     FontSize="{OnPlatform Android=13}"
                     TextColor="Black"
                      VerticalOptions="Center"
                      WidthRequest="150"
                     />
-                  <Button
-                     Text="¿Forgot password?"
-                     TextColor="Black"
-                     FontSize="{OnPlatform Android=13}"
-                     WidthRequest="150"
-                     HorizontalOptions="End"
-                     BackgroundColor="White"
-                     HeightRequest="30"
-                     Padding="0"
-                     IsEnabled="{Binding IsEnabledTxt}"
-                    />
+                  
                  </StackLayout> 
                  <Frame
                      HasShadow="{OnPlatform Android=true,iOS=false}"
@@ -96,7 +113,8 @@
                      >
 
                    <Entry
-                    Placeholder="******************"
+                    Placeholder="*************"
+                    PlaceholderColor="#747171"
                     MaxLength="25"
                     IsPassword="True"
                     FontSize="{OnPlatform Android=15,iOS=16}"
@@ -124,20 +142,21 @@
             <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" >
                       <Button
                      Text="Log in"
-                            TextColor="Black"
+                            TextColor="White"
                             Font="Montserrat-Medium.otf"
                             FontSize="{OnPlatform Android=15}"
-                            BackgroundColor="#fcfcfc"
-                            BorderColor="#f2f2f2"
+                            BackgroundColor="#041E42"
+                            BorderColor="#041E42"
+                            CornerRadius="10"
                             BorderWidth="1.5"
-                            WidthRequest="300"
-                            HeightRequest="50"
+                            WidthRequest="30"
+                            HeightRequest="45"
                             Command="{Binding LoginCommand}"
                             IsEnabled="{Binding IsEnabledTxt}"
                             Clicked="Login_Clicked"
                     />
                   <Button
-                            Text="Don't have an account? Sign Up"
+                            Text="¿No tienes cuenta? Registrate"
                             TextColor="{OnPlatform iOS=Black}"
                             FontSize="{OnPlatform Android=11,iOS=12}"
                             BackgroundColor="White"

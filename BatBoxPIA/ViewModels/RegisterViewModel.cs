@@ -94,8 +94,8 @@ namespace BatBoxPIA.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    "Debes ingresar tu correo.",
+                    "Aceptar");
                 return;
             }
 
@@ -103,12 +103,12 @@ namespace BatBoxPIA.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    "Debes ingresar tu contraseña.",
+                    "Aceptar");
                 return;
             }
 
-            string WebAPIkey = "AIzaSyAqKHquaB5CVY1DuTACXRW3F-Ze0KAS7RQ";
+            string WebAPIkey = "AIzaSyBfW_qJ83Gxsvz85yEZ-AWHgp6_zuRNB40";
 
             try
             {
