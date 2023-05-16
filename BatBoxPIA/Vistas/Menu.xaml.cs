@@ -32,5 +32,15 @@ namespace BatBoxPIA.Vistas
         {
             Navigation.PushAsync(new PaginaInicial());
         }
+
+        private void btnEstadisticasBateo_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DataViewBateo());
+        }
+
+        private void btnEstadisticasPitcheo_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DataViewPitcheo());
+        }
     }
 }

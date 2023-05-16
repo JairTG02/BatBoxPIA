@@ -2,11 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.DataViewPitcheo">
-    <ContentPage.Content>
+    <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#041E42"
+                   Margin="10,10,10,0"
+                   HasShadow="False"
+                   CornerRadius="10">
+                <StackLayout>
+                    <Label Text="ESTADÍSTICAS PITCHEO"
+                           TextColor="#fff"
+                           HorizontalOptions="Center"
+                           FontSize="20" />
+                </StackLayout>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>
