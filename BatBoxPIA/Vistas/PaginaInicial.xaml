@@ -3,34 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.PaginaInicial">
     <ScrollView>
-    <RelativeLayout>
-        <Image Source="https://i.ibb.co/PYTWy0z/fondo.png"
-               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
-        <Grid  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Grid>
-            <StackLayout>
+        <RelativeLayout>
+            <Image Source="https://i.ibb.co/PYTWy0z/fondo.png"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
+            <Grid  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Grid>
+            <StackLayout Margin="40"
+                         Spacing="20">
                 <Label Text="BAT"
-               FontSize="60"
-               FontAttributes="Bold"
-               TextColor="#041E42"
-               HorizontalOptions="Center"/>
+                       FontSize="60"
+                       FontAttributes="Bold"
+                       TextColor="#041E42"
+                       HorizontalOptions="Center" />
                 <Label Text="BOX"
-               FontSize="60"
-               FontAttributes="Bold"
-               TextColor="#041E42"
-               HorizontalOptions="Center"/>
-
-                <Frame VerticalOptions="FillAndExpand" 
-               Margin="20"
-               CornerRadius="20"
-               HasShadow="False">
-                    <StackLayout  VerticalOptions="Center" Spacing="40">
-                        <!-- antes de un comentario y, luego, agregue -->
-                        <Image Source="https://imagenes.elpais.com/resizer/zd42fZGBpxUdZMrRKONv1XknQGY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/NXBNVD7REYVJCH4OJ4ZEKNYEEA.jpg">
-
-                        </Image>
-                        <Button Text="Login"
+                       FontSize="60"
+                       FontAttributes="Bold"
+                       TextColor="#041E42"
+                       HorizontalOptions="Center" />
+                <Button Text="Login"
+                        TextColor="White"
+                        BackgroundColor="#041E42"
+                        BorderColor="#041E42"
+                        CornerRadius="10"
+                        BorderWidth="1.5"
+                        WidthRequest="250"
+                        HeightRequest="45"
+                        Margin="0,20"
+                        x:Name="btnLogin"
+                        Clicked="btnLogin_Clicked" />
+                <Button Text="Registrarse"
                         TextColor="White"
                         BackgroundColor="#041E42"
                         BorderColor="#041E42"
@@ -38,22 +40,8 @@
                         BorderWidth="1.5"
                         WidthRequest="30"
                         HeightRequest="45"
-                        x:Name="btnLogin" 
-                        Clicked="btnLogin_Clicked"></Button>
-                        <Button Text="Registrarse"
-                        TextColor="White"
-                        BackgroundColor="#041E42"
-                        BorderColor="#041E42"
-                        CornerRadius="10"
-                        BorderWidth="1.5"
-                        WidthRequest="30"
-                        HeightRequest="45"
-                        x:Name="btnRegistrarse" 
-                        Clicked="btnRegistrarse_Clicked"></Button>
-                    </StackLayout>
-                </Frame>
-
-
+                        x:Name="btnRegistrarse"
+                        Clicked="btnRegistrarse_Clicked" />
             </StackLayout>
         </RelativeLayout>
     </ScrollView>
