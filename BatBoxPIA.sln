@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatBoxPIA.Android", "BatBox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatBoxPIA.iOS", "BatBoxPIA.iOS\BatBoxPIA.iOS.csproj", "{FE341482-5512-44FF-BEA0-AEFE285C8E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatBoxPIA", "BatBoxPIA\BatBoxPIA.csproj", "{CE56AA36-E925-45DB-8B7F-48AB0BC74721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatBoxPIA", "BatBoxPIA\BatBoxPIA.csproj", "{CE56AA36-E925-45DB-8B7F-48AB0BC74721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{7620A59E-F88F-4793-96BF-E447F3C72169}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{7620A59E-F88F-4793-96BF-E447F3C72169}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{FE341482-5512-44FF-BEA0-AEFE285C8E4C}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{FE341482-5512-44FF-BEA0-AEFE285C8E4C}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{FE341482-5512-44FF-BEA0-AEFE285C8E4C}.Debug|Any CPU.Deploy.0 = Debug|iPhone
 		{FE341482-5512-44FF-BEA0-AEFE285C8E4C}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{FE341482-5512-44FF-BEA0-AEFE285C8E4C}.Debug|iPhone.Build.0 = Debug|iPhone
