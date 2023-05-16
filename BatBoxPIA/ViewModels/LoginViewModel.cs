@@ -8,7 +8,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 
 
-[assembly: ExportFont("Times-New-Roman.ttf", Alias = "titulo")]
+
 //using System.IO;
 //using Xamarin.Forms;
 //using Xamarin.Forms.Xaml;
@@ -108,7 +108,7 @@ namespace BatBoxPIA.ViewModels
                 
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await App.Current.MainPage.DisplayAlert("Alerta", "La contraseña o el correo son incorrectos", "OK");
             }
