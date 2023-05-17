@@ -8,8 +8,14 @@ namespace BatBoxPIA.Models
 {
     public class EstadisticaBateoModel
     {
+        [PrimaryKey, AutoIncrement]
+        public int IdJugador { get; set; }
+        [MaxLength(50)]
+
         [DisplayName("Nombre del bateador")]
         public string NombreBateador { get; set; }
+        [MaxLength(50)]
+
         [DisplayName("Veces al bat")]
         public int VecesAlBat { get; set; }
         public int Hits { get; set; }

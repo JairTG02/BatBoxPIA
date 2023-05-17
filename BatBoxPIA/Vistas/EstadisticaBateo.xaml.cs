@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using BatBoxPIA.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using BatBoxPIA.Data;
+using BatBoxPIA.Database;
+using System.ComponentModel;
 
 namespace BatBoxPIA.Vistas
 {
@@ -65,6 +69,97 @@ namespace BatBoxPIA.Vistas
 
 
                 }
+        }
+
+        private async void btnAgregar_Clicked(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                EstadisticaBateoModel bateo = new EstadisticaBateoModel
+                {
+                    NombreBateador = txtNombreJugador.Text,
+                    VecesAlBat = int.Parse(txtVecesAlBat.Text),
+                    HR = int.Parse(txtHR.Text),
+                    Hits = int.Parse(txtHits.Text),
+                    BasesPorBola = int.Parse(txtBB.Text),
+                    Dobletes = int.Parse(txtDobletes.Text),
+                    BasesPorGolpe = int.Parse(txtHBP.Text),
+                    Tripletes = int.Parse(txtTripletes.Text),
+                    Sacrificios = int.Parse(txtSAC.Text),
+                    AVG = float.Parse(txtAVG.Text), 
+                    OBP = float.Parse(txtOBP.Text),
+                    SLUG = float.Parse(txtSlugging.Text),
+                    OPS = float.Parse(txtOPS.Text)
+                };
+
+                await App.SQLiteDB.SaveBateoAsync(bateo);
+
+                txtNombreJugador.Text = "";
+                txtHR.Text = "";
+                txtHits.Text = "";
+                txtBB.Text = "";
+                txtDobletes.Text = "";
+                txtHBP.Text = "";
+                txtTripletes.Text = "";
+                txtSAC.Text = "";
+                txtAVG.Text = "";
+                txtOBP.Text = "";
+                txtSlugging.Text = "";
+                txtOPS.Text = "";
+                await DisplayAlert("Registro", "Se guardo de manera exitosa", "OK");
+
+            }
+            else
+            {
+                await DisplayAlert("Advertencia", "Ingresar todos los datos", "OK");
+
+            }
+        }
+
+        public bool ValidarDatos()
+        {
+            bool respuesta;
+            if (string.IsNullOrEmpty(txtNombreJugador.Text))
+            { 
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtVecesAlBat.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtHR.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtHits.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtBB.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtDobletes.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtHBP.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtTripletes.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtSAC.Text))
+            {
+                respuesta = false;
+            }
+            else
+            {
+                respuesta = true;
+            }
+            return respuesta;
         }
     }
 

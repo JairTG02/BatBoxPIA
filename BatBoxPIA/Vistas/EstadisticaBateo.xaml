@@ -175,7 +175,7 @@
                    HasShadow="False">
                 <StackLayout>
                     <Button x:Name="btnAgregar"
-                            Clicked="btnCalcular_Clicked"
+                            Clicked="btnAgregar_Clicked"
                             Text="Agregar"
                             TextColor="#fff"
                             TextTransform="None"

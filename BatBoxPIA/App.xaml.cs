@@ -31,7 +31,7 @@ namespace BatBoxPIA
 
         static SQLiteHelper db;
 
-        public SQLiteHelper SQLiteDB
+        public static SQLiteHelper SQLiteDB
         {
             get 
             { 
