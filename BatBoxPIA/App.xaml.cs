@@ -5,10 +5,12 @@ using Xamarin.Forms.Xaml;
 using BatBoxPIA.Vistas;
 using BatBoxPIA.Database;
 using BatBoxPIA.Vistas.AccessApp;
+using BatBoxPIA.Data;
     
 
 namespace BatBoxPIA
 {
+    
     public partial class App : Application
     {
         #region Database
@@ -27,6 +29,19 @@ namespace BatBoxPIA
         }
         #endregion
 
+        static SQLiteHelper db;
+
+        public SQLiteHelper SQLiteDB
+        {
+            get 
+            { 
+                if (db == null)
+                {
+                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BatBoxPIA.db3"));
+                }
+                return db;
+            }
+        }
         public App()
         {
             InitializeComponent();
