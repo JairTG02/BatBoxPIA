@@ -40,5 +40,24 @@ namespace BatBoxPIA.Data
                 return null;
             }
         }
+        /// <summary>
+        /// Recuperar todos los datos de Bateo
+        /// </summary>
+        /// <returns></returns>
+        public Task<List<EstadisticaBateoModel>> GetBateoAsync()
+        {
+            return db.Table<EstadisticaBateoModel>().ToListAsync();
+        }
+
+        /// <summary>
+        /// Recupera datos por Id
+        /// </summary>
+        /// <param name="IdJugador"> Id del Jugador requerido</param>
+        /// <returns></returns>
+        public Task<EstadisticaBateoModel> GetBateoByIdAsync(int IdJugador)
+        {
+            return db.Table<EstadisticaBateoModel>().Where(a => a.IdJugador==IdJugador).FirstOrDefaultAsync();
+        }
+           
     }
 }

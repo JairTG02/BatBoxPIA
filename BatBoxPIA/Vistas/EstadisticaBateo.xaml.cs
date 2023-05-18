@@ -108,7 +108,11 @@ namespace BatBoxPIA.Vistas
                 txtOPS.Text = "";
 
                 await DisplayAlert("Registro", "Se guardo de manera exitosa", "OK");
-
+                var BateoList = await App.SQLiteDB.GetBateoAsync();
+                if (BateoList != null )
+                {
+                    lstJugadoresBateo.ItemsSource = BateoList;
+                }
             }
             else
             {
