@@ -106,6 +106,7 @@ namespace BatBoxPIA.Vistas
                 txtOBP.Text = "";
                 txtSlugging.Text = "";
                 txtOPS.Text = "";
+
                 await DisplayAlert("Registro", "Se guardo de manera exitosa", "OK");
 
             }

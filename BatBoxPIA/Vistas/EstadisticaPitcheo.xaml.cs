@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using BatBoxPIA.Models;
 using Newtonsoft.Json;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BatBoxPIA.Vistas
 {
@@ -48,38 +49,73 @@ namespace BatBoxPIA.Vistas
             }
         }
 
-        private void btnAgregar_Clicked(object sender, EventArgs e)
+        private async void btnAgregar_Clicked(object sender, EventArgs e)
         {
-            string JsonPitcheoRuta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), @"Data\EstadisticaPitcheo.json");
-
-            List<EstadisticaPitcheoModel> _TablaDatos = JsonConvert.DeserializeObject<List<EstadisticaPitcheoModel>>(File.ReadAllText(JsonPitcheoRuta)) ?? new List<EstadisticaPitcheoModel>();
-
-
-            if (string.IsNullOrEmpty(txtNombreJugador.Text.Trim()) || txtIP.Text == "" || txtHitsPermitidos.Text == "" || txtCarrerasPermitidas.Text == "" ||
-                txtBBPermitidos.Text == "")
-
+            if (ValidarDatos())
             {
-                DisplayAlert("Alert", "Es necesario que esten todos los valores", "Ok");
+                EstadisticaPitcheoModel pitcheo = new EstadisticaPitcheoModel
+                {
+                    NombreJugador = txtNombreJugador.Text,
+                    EntradasLanzadas = int.Parse(txtIP.Text),
+                    Hits = int.Parse(txtHitsPermitidos.Text),
+                    CarrerasPermitidas = int.Parse(txtCarrerasPermitidas.Text),
+                    BasePorBolas = int.Parse(txtBBPermitidos.Text),
+                    ERA = float.Parse(txtERA.Text),
+                    WHIP = float.Parse(txtWHIP.Text)
+                };
+
+                await App.SQLiteDB.SavePitcheoAsync(pitcheo);
+
+                txtNombreJugador.Text = "";
+                txtIP.Text = "";
+                txtHitsPermitidos.Text = "";
+                txtCarrerasPermitidas.Text = "";
+                txtBBPermitidos.Text = "";
+                txtERA.Text = "";
+                txtWHIP.Text = "";
+
+                await DisplayAlert("Registro", "Se guardo de manera exitosa", "OK");
+
             }
             else
             {
-                EstadisticaPitcheoModel fila = new EstadisticaPitcheoModel();
-                fila.EntradasLanzadas = double.Parse(txtIP.Text);
-                fila.Hits = int.Parse(txtHitsPermitidos.Text);
-                fila.CarrerasPermitidas = int.Parse(txtCarrerasPermitidas.Text);
-                fila.BasePorBolas = int.Parse(txtBBPermitidos.Text);
-                fila.NombreJugador = txtNombreJugador.Text;
-                fila.ERA = Math.Round(double.Parse(txtERA.Text), 3);
-                fila.WHIP = Math.Round(double.Parse(txtWHIP.Text), 3);
+                await DisplayAlert("Advertencia", "Ingresar todos los datos", "OK");
+            }
+            
+           
+        }
+        public bool ValidarDatos()
+        {
+            bool respuesta;
 
-                //_TablaDatos.Add(fila);
-                //TablaDatosPitcher.DataSource = _TablaDatos;
-                //TablaDatosPitcher.Refresh();
-
-                var jsonSave = JsonConvert.SerializeObject(_TablaDatos);
-                File.WriteAllText(JsonPitcheoRuta, jsonSave);
+            if (string.IsNullOrEmpty(txtNombreJugador.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtIP.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtHitsPermitidos.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtCarrerasPermitidas.Text))
+            {
+                respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtBBPermitidos.Text))
+            {
+                respuesta = false;
 
             }
+            else 
+            { 
+                respuesta = true; 
+            }
+            return respuesta;
+           
+         }
+
         }
-    }
 }
