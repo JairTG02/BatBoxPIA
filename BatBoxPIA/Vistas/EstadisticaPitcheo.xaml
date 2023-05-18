@@ -3,157 +3,160 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BatBoxPIA.Vistas.EstadisticaPitcheo">
     <ScrollView>
-        <Grid RowDefinitions="*,*,*,*,*"
-              ColumnDefinitions="*,*"
-              BackgroundColor="#fff"
-              RowSpacing="0">
-            <Frame Grid.ColumnSpan="2"
-                   HasShadow="False">
-                <StackLayout>
-                    <Label Text="Nombre del jugador"
-                           TextColor="#000"
-                           Grid.ColumnSpan="2"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtNombreJugador"
-                           BackgroundColor="#E8E3E3"
-                           Placeholder="Ingrese nombre del pitcher"
-                           FontSize="Small"
-                           PlaceholderColor="#747171"
-                           HeightRequest="40"
-                           TextColor="#000" />
-                </StackLayout>
+        <StackLayout>
+            <Frame>
+                <Grid RowDefinitions="*,*,*,*,*"
+                      ColumnDefinitions="*,*"
+                      BackgroundColor="#fff"
+                      RowSpacing="0">
+                    <Frame Grid.ColumnSpan="2"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Nombre del jugador"
+                                   TextColor="#000"
+                                   Grid.ColumnSpan="2"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtNombreJugador"
+                                   BackgroundColor="#E8E3E3"
+                                   Placeholder="Ingrese nombre del pitcher"
+                                   FontSize="Small"
+                                   PlaceholderColor="#747171"
+                                   HeightRequest="40"
+                                   TextColor="#000" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Entradas lanzadas"
+                                   FontSize="Caption"
+                                   TextColor="#000"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtIP"
+                                   FontSize="Medium"
+                                   BackgroundColor="#E8E3E3"
+                                   HeightRequest="40"
+                                   Keyboard="Numeric"
+                                   TextColor="Black"
+                                   Margin="20,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1"
+                           Grid.Column="1"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Hits permitidos"
+                                   FontSize="12"
+                                   TextColor="#000"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtHitsPermitidos"
+                                   FontSize="Medium"
+                                   BackgroundColor="#E8E3E3"
+                                   HeightRequest="40"
+                                   Keyboard="Numeric"
+                                   TextColor="Black"
+                                   Margin="20,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Label Text="Carreras permitidas"
+                                   FontSize="Caption"
+                                   TextColor="#000"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtCarrerasPermitidas"
+                                   FontSize="Medium"
+                                   BackgroundColor="#E8E3E3"
+                                   HeightRequest="40"
+                                   Keyboard="Numeric"
+                                   TextColor="Black"
+                                   Margin="20,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2"
+                           Grid.Column="1"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Label Text="BB permitidos"
+                                   FontSize="Caption"
+                                   TextColor="#000"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtBBPermitidos"
+                                   FontSize="Medium"
+                                   BackgroundColor="#E8E3E3"
+                                   HeightRequest="40"
+                                   Keyboard="Numeric"
+                                   TextColor="Black"
+                                   Margin="20,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="3"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Button x:Name="btnCalcular"
+                                    Clicked="btnCalcular_Clicked"
+                                    Text="Calcular"
+                                    TextColor="#fff"
+                                    TextTransform="None"
+                                    HeightRequest="30"
+                                    CornerRadius="10"
+                                    BackgroundColor="#BF0F3E"
+                                    Margin="0,15"
+                                    Padding="10,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="3"
+                           Grid.Column="1"
+                           HasShadow="False">
+                        <StackLayout>
+                            <Button x:Name="btnAgregar"
+                                    Clicked="btnAgregar_Clicked"
+                                    Text="Agregar"
+                                    TextColor="#fff"
+                                    TextTransform="None"
+                                    HeightRequest="30"
+                                    CornerRadius="10"
+                                    BackgroundColor="#041E42"
+                                    Margin="0,15"
+                                    Padding="10,0" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="4"
+                           HasShadow="False"
+                           Margin="40,0,0,0">
+                        <StackLayout>
+                            <Label Text="ERA"
+                                   TextColor="#BF0D3E"
+                                   FontSize="Caption"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtERA"
+                                   Placeholder="0.0"
+                                   HeightRequest="40"
+                                   TextColor="Black"
+                                   IsReadOnly="True"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="4"
+                           Grid.Column="1"
+                           HasShadow="False"
+                           Margin="0,0,40,0">
+                        <StackLayout>
+                            <Label Text="WHIP"
+                                   TextColor="#BF0D3E"
+                                   FontSize="Caption"
+                                   HorizontalOptions="Center" />
+                            <Entry x:Name="txtWHIP"
+                                   Placeholder="0.0"
+                                   HeightRequest="40"
+                                   TextColor="Black"
+                                   IsReadOnly="True"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Frame>
+                </Grid>
             </Frame>
-            <Frame Grid.Row="1"
-                   HasShadow="False">
-                <StackLayout>
-                    <Label Text="Entradas lanzadas"
-                           FontSize="Caption"
-                           TextColor="#000"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtIP"
-                           FontSize="Medium"
-                           BackgroundColor="#E8E3E3"
-                           HeightRequest="40"
-                           Keyboard="Numeric"
-                           TextColor="Black"
-                           Margin="20,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="1"
-                   Grid.Column="1"
-                   HasShadow="False">
-                <StackLayout>
-                    <Label Text="Hits permitidos"
-                           FontSize="12"
-                           TextColor="#000"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtHitsPermitidos"
-                           FontSize="Medium"
-                           BackgroundColor="#E8E3E3"
-                           HeightRequest="40"
-                           Keyboard="Numeric"
-                           TextColor="Black"
-                           Margin="20,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="2"
-                   HasShadow="False">
-                <StackLayout>
-                    <Label Text="Carreras permitidas"
-                           FontSize="Caption"
-                           TextColor="#000"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtCarrerasPermitidas"
-                           FontSize="Medium"
-                           BackgroundColor="#E8E3E3"
-                           HeightRequest="40"
-                           Keyboard="Numeric"
-                           TextColor="Black"
-                           Margin="20,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="2"
-                   Grid.Column="1"
-                   HasShadow="False">
-                <StackLayout>
-                    <Label Text="BB permitidos"
-                           FontSize="Caption"
-                           TextColor="#000"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtBBPermitidos"
-                           FontSize="Medium"
-                           BackgroundColor="#E8E3E3"
-                           HeightRequest="40"
-                           Keyboard="Numeric"
-                           TextColor="Black"
-                           Margin="20,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="3"
-                   HasShadow="False">
-                <StackLayout>
-                    <Button x:Name="btnCalcular"
-                            Clicked="btnCalcular_Clicked"
-                            Text="Calcular"
-                            TextColor="#fff"
-                            TextTransform="None"
-                            HeightRequest="30"
-                            CornerRadius="10"
-                            BackgroundColor="#BF0F3E"
-                            Margin="0,15"
-                            Padding="10,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="3"
-                   Grid.Column="1"
-                   HasShadow="False">
-                <StackLayout>
-                    <Button x:Name="btnAgregar"
-                            Clicked="btnAgregar_Clicked"
-                            Text="Agregar"
-                            TextColor="#fff"
-                            TextTransform="None"
-                            HeightRequest="30"
-                            CornerRadius="10"
-                            BackgroundColor="#041E42"
-                            Margin="0,15"
-                            Padding="10,0" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="4"
-                   HasShadow="False"
-                   Margin="40,0,0,0">
-                <StackLayout>
-                    <Label Text="ERA"
-                           TextColor="#BF0D3E"
-                           FontSize="Caption"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtERA"
-                           Placeholder="0.0"
-                           HeightRequest="40"
-                           TextColor="Black"
-                           IsReadOnly="True"
-                           HorizontalOptions="Center" />
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="4"
-                   Grid.Column="1"
-                   HasShadow="False"
-                   Margin="0,0,40,0">
-                <StackLayout>
-                    <Label Text="WHIP"
-                           TextColor="#BF0D3E"
-                           FontSize="Caption"
-                           HorizontalOptions="Center" />
-                    <Entry x:Name="txtWHIP"
-                           Placeholder="0.0"
-                           HeightRequest="40"
-                           TextColor="Black"
-                           IsReadOnly="True"
-                           HorizontalOptions="Center" />
-                </StackLayout>
-            </Frame>
-            
             <Frame Grid.Row="5"
                    Grid.ColumnSpan="2"
                    HasShadow="False"
@@ -164,35 +167,57 @@
                             <ViewCell>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding IdJugador}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
-                                    <Label Text="{Binding NombreJugador}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
-                                    <Label Text="{Binding EntradasLanzadas}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
-                                    <Label Text="{Binding Hits}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
-                                    <Label Text="{Binding CarrerasPermitidas}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
-                                    <Label Text="{Binding BasePorBolas}" Grid.Row="0" Grid.Column="5" TextColor="Black"/>
-                                    <Label Text="{Binding ERA}" Grid.Row="0" Grid.Column="6" TextColor="#BF0D3E"/>
-                                    <Label Text="{Binding WHIP}" Grid.Row="0" Grid.Column="7" TextColor="#BF0D3E"/>
+                                    <Label Text="{Binding IdJugador}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding NombreJugador}"
+                                           Grid.Row="0"
+                                           Grid.Column="1"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding EntradasLanzadas}"
+                                           Grid.Row="0"
+                                           Grid.Column="2"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding Hits}"
+                                           Grid.Row="0"
+                                           Grid.Column="3"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding CarrerasPermitidas}"
+                                           Grid.Row="0"
+                                           Grid.Column="4"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding BasePorBolas}"
+                                           Grid.Row="0"
+                                           Grid.Column="5"
+                                           TextColor="Black" />
+                                    <Label Text="{Binding ERA}"
+                                           Grid.Row="0"
+                                           Grid.Column="6"
+                                           TextColor="#BF0D3E" />
+                                    <Label Text="{Binding WHIP}"
+                                           Grid.Row="0"
+                                           Grid.Column="7"
+                                           TextColor="#BF0D3E" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Frame>
-
-            
-        </Grid>
+        </StackLayout>
     </ScrollView>
 </ContentPage>
