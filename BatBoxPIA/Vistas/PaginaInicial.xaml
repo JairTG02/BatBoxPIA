@@ -29,7 +29,7 @@
                         BorderWidth="1.5"
                         WidthRequest="250"
                         HeightRequest="45"
-                        Margin="0,20"
+                        Margin="10,20"
                         x:Name="btnLogin"
                         Clicked="btnLogin_Clicked" />
                 <Button Text="Registrarse"
@@ -40,6 +40,7 @@
                         BorderWidth="1.5"
                         WidthRequest="30"
                         HeightRequest="45"
+                        Margin="10,20"
                         x:Name="btnRegistrarse"
                         Clicked="btnRegistrarse_Clicked" />
             </StackLayout>

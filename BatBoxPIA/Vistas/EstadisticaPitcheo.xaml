@@ -5,7 +5,8 @@
     <ScrollView>
         <Grid RowDefinitions="*,*,*,*,*"
               ColumnDefinitions="*,*"
-              BackgroundColor="#fff">
+              BackgroundColor="#fff"
+              RowSpacing="0">
             <Frame Grid.ColumnSpan="2"
                    HasShadow="False">
                 <StackLayout>

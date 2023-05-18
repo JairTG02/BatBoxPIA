@@ -55,7 +55,6 @@
                          HorizontalTextAlignment="Center"
                          HorizontalOptions="Center"
                          FontSize="40"
-                         Margin="0,0,0,5"
                          WidthRequest="300"
                          TextColor="#942A2A"
                          />

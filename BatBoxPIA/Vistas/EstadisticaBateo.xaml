@@ -236,6 +236,7 @@
                 </StackLayout>
             </Frame>
 
+
             <Frame Grid.Row="7"
                    Grid.Column="1"
                    HasShadow="False"
@@ -254,54 +255,42 @@
                 </StackLayout>
 
             </Frame>
-            
-            
-            
-            <ListView x:Name="lstJugadoresBateo">
-                <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="{Binding IdJugador}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
-                            <Label Text="{Binding NombreJugador}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
-                            <Label Text="{Binding VecesAlBat}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
-                            <Label Text="{Binding Hits}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
-                            <Label Text="{Binding Dobletes}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
-                            <Label Text="{Binding Tripletes}" Grid.Row="0" Grid.Column="5" TextColor="Black"/>
-                            <Label Text="{Binding HomeRuns}" Grid.Row="0" Grid.Column="6" TextColor="Black"/>
-                            <Label Text="{Binding BasePorBolas}" Grid.Row="0" Grid.Column="7" TextColor="Black"/>
-                            <Label Text="{Binding BasePorGolpe}" Grid.Row="0" Grid.Column="8" TextColor="Black"/>
-                            <Label Text="{Binding Sacrificios}" Grid.Row="0" Grid.Column="9" TextColor="Black"/>
-                            <Label Text="{Binding AVG}" Grid.Row="0" Grid.Column="10" TextColor="Black"/>
-                            <Label Text="{Binding OBP}" Grid.Row="0" Grid.Column="11" TextColor="Black"/>
-                            <Label Text="{Binding SLUG}" Grid.Row="0" Grid.Column="12" TextColor="Black"/>
-                            <Label Text="{Binding OPS}" Grid.Row="0" Grid.Column="13" TextColor="Black"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+            <Frame Grid.Row="8"
+                   Grid.ColumnSpan="2"
+                   HasShadow="False"
+                   BackgroundColor="White">
+                <ListView x:Name="lstJugadoresBateo">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding IdJugador}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                                    <Label Text="{Binding NombreBateador}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                                    <Label Text="{Binding VecesAlBat}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                                    <Label Text="{Binding AVG}" Grid.Row="0" Grid.Column="4" TextColor="#BF0D3E"/>
+                                    <Label Text="{Binding OBP}" Grid.Row="0" Grid.Column="5" TextColor="#BF0D3E"/>
+                                    <Label Text="{Binding SLUG}" Grid.Row="0" Grid.Column="6" TextColor="#BF0D3E"/>
+                                    <Label Text="{Binding OPS}" Grid.Row="0" Grid.Column="7" TextColor="#BF0D3E"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
         </Grid>
-                
     </ScrollView>
 </ContentPage>
