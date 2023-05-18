@@ -58,6 +58,26 @@ namespace BatBoxPIA.Data
         {
             return db.Table<EstadisticaBateoModel>().Where(a => a.IdJugador==IdJugador).FirstOrDefaultAsync();
         }
+
+        /// <summary>
+        /// Recuperar todos los datos de Pitcheo
+        /// </summary>
+        /// <returns></returns>
+        public Task<List<EstadisticaPitcheoModel>>GetPitcheoAsync()
+        {
+            return db.Table<EstadisticaPitcheoModel>().ToListAsync();
+        }
+
+        /// <summary>
+        /// Recuperacion de datos por ID de Pitcheo
+        /// </summary>
+        /// <param name="IdJugador"></param>
+        /// <returns></returns>
+
+        public Task<EstadisticaPitcheoModel> GetPitcheoByIdAsync(int IdJugador)
+        {
+            return db.Table<EstadisticaPitcheoModel>().Where(a => a.IdJugador == IdJugador).FirstOrDefaultAsync();
+        }
            
     }
 }
