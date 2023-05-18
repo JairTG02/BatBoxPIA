@@ -75,6 +75,11 @@ namespace BatBoxPIA.Vistas
                 txtWHIP.Text = "";
 
                 await DisplayAlert("Registro", "Se guardo de manera exitosa", "OK");
+                var PitcheoList = await App.SQLiteDB.GetPitcheoAsync();
+                if (PitcheoList != null)
+                {
+                    //lstJugadoresPitcheo.ItemsSource = PitcheoList;
+                }
 
             }
             else
