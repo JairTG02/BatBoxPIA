@@ -78,7 +78,7 @@ namespace BatBoxPIA.Vistas
                 var PitcheoList = await App.SQLiteDB.GetPitcheoAsync();
                 if (PitcheoList != null)
                 {
-                    //lstJugadoresPitcheo.ItemsSource = PitcheoList;
+                    lstJugadoresPitcheo.ItemsSource = PitcheoList;
                 }
 
             }

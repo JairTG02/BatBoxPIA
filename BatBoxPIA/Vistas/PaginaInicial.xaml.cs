@@ -25,7 +25,7 @@ namespace BatBoxPIA.Vistas
             {
                 if (database == null)
                 {
-                    database = new DatabaseQuerys(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DBname.db"));
+                    database = new DatabaseQuerys(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BatBox.db"));
                 }
                 return database;
             }
