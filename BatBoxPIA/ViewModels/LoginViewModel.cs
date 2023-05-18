@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using BatBoxPIA.Vistas;
+using BatBoxPIA.Vistas.AccessApp;
 using Firebase.Auth;
 using GalaSoft.MvvmLight.Command;
 using Newtonsoft.Json;
@@ -85,6 +87,7 @@ namespace BatBoxPIA.ViewModels
                     "Error",
                     "Debes ingresar tu correo.",
                     "Aceptar");
+                await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
                 return;
             }
             if (string.IsNullOrEmpty(this.password))
@@ -93,6 +96,7 @@ namespace BatBoxPIA.ViewModels
                     "Error",
                     "Debes ingresar tu contraseña.",
                     "Aceptar");
+                await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
                 return;
             }
 
@@ -107,10 +111,24 @@ namespace BatBoxPIA.ViewModels
                 var serializedcontnet = JsonConvert.SerializeObject(content);
                 
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
+
+                //cambios
+                if (auth != null)
+                {
+                    //App.Current.MainPage = new PaginaInicial();
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Alerta", "La contraseña o el correo son incorrectos", "OK");
+
+                    await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
+                }
             }
             catch (Exception)
             {
                 await App.Current.MainPage.DisplayAlert("Alerta", "La contraseña o el correo son incorrectos", "OK");
+
+                await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
             }
 
             /*
