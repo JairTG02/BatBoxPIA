@@ -152,39 +152,46 @@
                            HorizontalOptions="Center" />
                 </StackLayout>
             </Frame>
+            
+            <Frame Grid.Row="5"
+                   Grid.ColumnSpan="2"
+                   HasShadow="False"
+                   BackgroundColor="White">
+                <ListView x:Name="lstJugadoresPitcheo">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding IdJugador}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                                    <Label Text="{Binding NombreJugador}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                                    <Label Text="{Binding EntradasLanzadas}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                                    <Label Text="{Binding Hits}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                                    <Label Text="{Binding CarrerasPermitidas}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
+                                    <Label Text="{Binding BasePorBolas}" Grid.Row="0" Grid.Column="5" TextColor="Black"/>
+                                    <Label Text="{Binding ERA}" Grid.Row="0" Grid.Column="6" TextColor="#BF0D3E"/>
+                                    <Label Text="{Binding WHIP}" Grid.Row="0" Grid.Column="7" TextColor="#BF0D3E"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
 
-            <ListView x:Name="lstJugadoresPitcheo">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding IdJugador}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
-                                <Label Text="{Binding NombreJugador}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
-                                <Label Text="{Binding EntradasLanzadas}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
-                                <Label Text="{Binding Hits}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
-                                <Label Text="{Binding CarrerasPermitidas}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
-                                <Label Text="{Binding BasePorBolas}" Grid.Row="0" Grid.Column="5" TextColor="Black"/>
-                                <Label Text="{Binding ERA}" Grid.Row="0" Grid.Column="6" TextColor="Black"/>
-                                <Label Text="{Binding WHIP}" Grid.Row="0" Grid.Column="7" TextColor="Black"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            
         </Grid>
     </ScrollView>
 </ContentPage>
